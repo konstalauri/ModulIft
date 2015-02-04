@@ -11,23 +11,4 @@
 @implementation MLLocationModel
 
 
-- (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate
-{
-    _coordinate = newCoordinate;
-}
-
-
-- (void)setLocationName:(NSString *)locationName
-{
-    _locationName = locationName;
-    _title = locationName;
-}
-
-- (void)setLocationAddress:(NSString *)locationAddress
-{
-    _locationAddress = locationAddress;
-    _subtitle = locationAddress;
-    
-}
-
 @end

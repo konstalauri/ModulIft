@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EA7AEE4F-9317-43CE-8C08-10605D44A5C5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Modulift</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>34953B1535AB6DE71C0300C17CB01BBF67622CD8</key>
+		<string>https://github.com/konstalauri/Modulift.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Modulift.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>34953B1535AB6DE71C0300C17CB01BBF67622CD8</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/konstalauri/Modulift.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>34953B1535AB6DE71C0300C17CB01BBF67622CD8</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>34953B1535AB6DE71C0300C17CB01BBF67622CD8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Modulift</string>
+		</dict>
+	</array>
+</dict>
+</plist>

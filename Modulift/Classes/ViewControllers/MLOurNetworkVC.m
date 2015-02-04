@@ -10,16 +10,21 @@
 #import <MapKit/MapKit.h>
 #import "MLLocationInfoCollectionCell.h"
 #import "MLAnnotationView.h"
+#import "MLPinButton.h"
 
 
-@interface MLOurNetworkVC () <UICollectionViewDataSource, UICollectionViewDelegate, MKMapViewDelegate>
+@interface MLOurNetworkVC () <UICollectionViewDataSource, UICollectionViewDelegate>
 {
     NSMutableArray *arrayLocations;
+    NSMutableArray *arrayButtonsForPin;
     
 }
 
-@property (nonatomic, weak) IBOutlet MKMapView          *mapView;
 @property (nonatomic, weak) IBOutlet UICollectionView   *clsviewForInformation;
+@property (nonatomic, weak) IBOutlet UIView             *viewMapContainer;
+@property (nonatomic, weak) IBOutlet UIImageView        *imgviewMap;
+
+
 
 @end
 
@@ -30,23 +35,25 @@
     // Do any additional setup after loading the view.
     
     arrayLocations = [[NSMutableArray alloc] init];
+    arrayButtonsForPin = [[NSMutableArray alloc] init];
+    
     
     MLLocationModel *location0 = [[MLLocationModel alloc] init];
-    location0.coordinate = CLLocationCoordinate2DMake(23, 30);
+    location0.position = CGPointMake(100, 197);
     location0.locationName = @"ABC";
     location0.locationAddress = @"ajlfkajsld jfad as dfjalk sdjfl a";
     location0.phoneNumber = @"+19380293094";
     [arrayLocations addObject:location0];
     
     MLLocationModel *location1 = [[MLLocationModel alloc] init];
-    location1.coordinate = CLLocationCoordinate2DMake(43, 30);
+    location1.position = CGPointMake(148, 150);
     location1.locationName = @"BBT";
     location1.locationAddress = @"oihp poi 4p3oipoi 4oipo 6ip4oiop";
     location1.phoneNumber = @"+19380234324";
     [arrayLocations addObject:location1];
     
     MLLocationModel *location2 = [[MLLocationModel alloc] init];
-    location2.coordinate = CLLocationCoordinate2DMake(26, 73);
+    location2.position = CGPointMake(195, 230);
     location2.locationName = @"BBT";
     location2.locationAddress = @"oihp poi 4p3oipoi 4oipo 6ip4oiop";
     location2.phoneNumber = @"+19380234324";
@@ -54,7 +61,7 @@
 
     
     MLLocationModel *location3 = [[MLLocationModel alloc] init];
-    location3.coordinate = CLLocationCoordinate2DMake(30, 40);
+    location3.position = CGPointMake(607, 150);
     location3.locationName = @"BBT";
     location3.locationAddress = @"oihp poi 4p3oipoi 4oipo 6ip4oiop";
     location3.phoneNumber = @"+19380234324";
@@ -62,7 +69,7 @@
 
     
     MLLocationModel *location4 = [[MLLocationModel alloc] init];
-    location4.coordinate = CLLocationCoordinate2DMake(53, 10);
+    location4.position = CGPointMake(498, 245);
     location4.locationName = @"BBT";
     location4.locationAddress = @"oihp poi 4p3oipoi 4oipo 6ip4oiop";
     location4.phoneNumber = @"+19380234324";
@@ -70,17 +77,14 @@
 
     
     MLLocationModel *location5 = [[MLLocationModel alloc] init];
-    location5.coordinate = CLLocationCoordinate2DMake(66, 48);
+    location5.position = CGPointMake(402, 198);
     location5.locationName = @"BBT";
     location5.locationAddress = @"oihp poi 4p3oipoi 4oipo 6ip4oiop";
     location5.phoneNumber = @"+19380234324";
     [arrayLocations addObject:location5];
 
     
-    
-    [self.mapView addAnnotations:arrayLocations];
-    
-//    [self addLocationsWithArray:arrayLocations];
+    [self addLocationsWithArray:arrayLocations];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -90,11 +94,49 @@
 
 - (void) addLocationsWithArray:(NSArray *)array
 {
+    [self.viewMapContainer.subviews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if ([obj isKindOfClass:[MLPinButton class]]) {
+            [(UIButton *)obj removeFromSuperview];
+        }
+    }];
+    
     [arrayLocations enumerateObjectsUsingBlock:^(MLLocationModel *locationInfo, NSUInteger idx, BOOL *stop) {
-        
+        MLPinButton *button = [MLPinButton createButtonWithLocation:locationInfo superView:self.viewMapContainer target:self selector:@selector(onClickPin:)];
+        [self.viewMapContainer addSubview:button];
     }];
 }
 
+
+- (void) onClickPin:(id)sender
+{
+    [self.viewMapContainer.subviews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if ([obj isKindOfClass:[MLPinButton class]]) {
+            MLPinButton *button = (MLPinButton *)obj;
+            if (button == sender || button.location == sender) {
+                button.selected = YES;
+                button.location.selected = YES;
+            } else {
+                button.selected = NO;
+                button.location.selected = NO;
+            }
+        }
+    }];
+
+    [self.clsviewForInformation reloadData];
+    
+    if ([sender isKindOfClass:[MLPinButton class]]) {
+        [arrayLocations enumerateObjectsUsingBlock:^(MLLocationModel *locationModel, NSUInteger idx, BOOL *stop) {
+            if (locationModel == [(MLPinButton *)sender location]) {
+                NSIndexPath *indexPath = [NSIndexPath indexPathForRow:idx inSection:0];
+                [self.clsviewForInformation scrollToItemAtIndexPath:indexPath atScrollPosition:(UICollectionViewScrollPositionCenteredHorizontally) animated:YES];
+                *stop = YES;
+            }
+        }];
+
+    }
+}
+
+/*
 #pragma mark - MKMapView delegate
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
@@ -138,6 +180,7 @@
     locationInfo.selected = NO;
     view.image = [UIImage imageNamed:@"pin"];
 }
+*/
 
 #pragma mark - UICollectionView datasource
 
@@ -157,6 +200,12 @@
 
 #pragma mark - UICollectionView delegate
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    MLLocationInfoCollectionCell *cell = (MLLocationInfoCollectionCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    [self onClickPin:cell.location];
+    
+}
 
 /*
 #pragma mark - Navigation

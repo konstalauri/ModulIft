@@ -19,6 +19,7 @@
 		17FF90AC1A81FCAB004E1A4A /* MLLocationInfoCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FF90AB1A81FCAB004E1A4A /* MLLocationInfoCollectionCell.m */; };
 		17FF90AF1A81FCEA004E1A4A /* MLLocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FF90AE1A81FCEA004E1A4A /* MLLocationModel.m */; };
 		17FF90B21A81FDEB004E1A4A /* MLAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FF90B11A81FDEB004E1A4A /* MLAnnotationView.m */; };
+		B497EA261A825E4D0017277C /* MLPinButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B497EA251A825E4D0017277C /* MLPinButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		17FF90AE1A81FCEA004E1A4A /* MLLocationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLocationModel.m; sourceTree = "<group>"; };
 		17FF90B01A81FDEB004E1A4A /* MLAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAnnotationView.h; sourceTree = "<group>"; };
 		17FF90B11A81FDEB004E1A4A /* MLAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLAnnotationView.m; sourceTree = "<group>"; };
+		B497EA241A825E4D0017277C /* MLPinButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPinButton.h; sourceTree = "<group>"; };
+		B497EA251A825E4D0017277C /* MLPinButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPinButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +191,8 @@
 				17FF90AB1A81FCAB004E1A4A /* MLLocationInfoCollectionCell.m */,
 				17FF90B01A81FDEB004E1A4A /* MLAnnotationView.h */,
 				17FF90B11A81FDEB004E1A4A /* MLAnnotationView.m */,
+				B497EA241A825E4D0017277C /* MLPinButton.h */,
+				B497EA251A825E4D0017277C /* MLPinButton.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 				17FF90AF1A81FCEA004E1A4A /* MLLocationModel.m in Sources */,
 				17FF90A91A81FB78004E1A4A /* MLOurNetworkVC.m in Sources */,
 				17FF90AC1A81FCAB004E1A4A /* MLLocationInfoCollectionCell.m in Sources */,
+				B497EA261A825E4D0017277C /* MLPinButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +499,7 @@
 				17FF90971A81FACF004E1A4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		17FF90981A81FACF004E1A4A /* Build configuration list for PBXNativeTarget "ModuliftTests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +508,7 @@
 				17FF909A1A81FACF004E1A4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
