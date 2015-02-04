@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		17FF90781A81FACE004E1A4A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FF90771A81FACE004E1A4A /* main.m */; };
 		17FF907B1A81FACE004E1A4A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FF907A1A81FACE004E1A4A /* AppDelegate.m */; };
-		17FF907E1A81FACE004E1A4A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FF907D1A81FACE004E1A4A /* ViewController.m */; };
 		17FF90811A81FACE004E1A4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17FF907F1A81FACE004E1A4A /* Main.storyboard */; };
 		17FF90831A81FACE004E1A4A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17FF90821A81FACE004E1A4A /* Images.xcassets */; };
 		17FF90861A81FACE004E1A4A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17FF90841A81FACE004E1A4A /* LaunchScreen.xib */; };
 		17FF90921A81FACF004E1A4A /* ModuliftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FF90911A81FACF004E1A4A /* ModuliftTests.m */; };
+		17FF90A31A81FB59004E1A4A /* MLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FF90A21A81FB59004E1A4A /* MLViewController.m */; };
+		17FF90A61A81FB63004E1A4A /* MLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FF90A51A81FB63004E1A4A /* MLObject.m */; };
+		17FF90A91A81FB78004E1A4A /* MLOurNetworkVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FF90A81A81FB78004E1A4A /* MLOurNetworkVC.m */; };
+		17FF90AC1A81FCAB004E1A4A /* MLLocationInfoCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FF90AB1A81FCAB004E1A4A /* MLLocationInfoCollectionCell.m */; };
+		17FF90AF1A81FCEA004E1A4A /* MLLocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FF90AE1A81FCEA004E1A4A /* MLLocationModel.m */; };
+		17FF90B21A81FDEB004E1A4A /* MLAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FF90B11A81FDEB004E1A4A /* MLAnnotationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +37,24 @@
 		17FF90771A81FACE004E1A4A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		17FF90791A81FACE004E1A4A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		17FF907A1A81FACE004E1A4A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		17FF907C1A81FACE004E1A4A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		17FF907D1A81FACE004E1A4A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		17FF90801A81FACE004E1A4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		17FF90821A81FACE004E1A4A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		17FF90851A81FACE004E1A4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		17FF908B1A81FACF004E1A4A /* ModuliftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModuliftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17FF90901A81FACF004E1A4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17FF90911A81FACF004E1A4A /* ModuliftTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModuliftTests.m; sourceTree = "<group>"; };
+		17FF90A11A81FB59004E1A4A /* MLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLViewController.h; sourceTree = "<group>"; };
+		17FF90A21A81FB59004E1A4A /* MLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLViewController.m; sourceTree = "<group>"; };
+		17FF90A41A81FB63004E1A4A /* MLObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLObject.h; sourceTree = "<group>"; };
+		17FF90A51A81FB63004E1A4A /* MLObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLObject.m; sourceTree = "<group>"; };
+		17FF90A71A81FB78004E1A4A /* MLOurNetworkVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLOurNetworkVC.h; sourceTree = "<group>"; };
+		17FF90A81A81FB78004E1A4A /* MLOurNetworkVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLOurNetworkVC.m; sourceTree = "<group>"; };
+		17FF90AA1A81FCAB004E1A4A /* MLLocationInfoCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLocationInfoCollectionCell.h; sourceTree = "<group>"; };
+		17FF90AB1A81FCAB004E1A4A /* MLLocationInfoCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLocationInfoCollectionCell.m; sourceTree = "<group>"; };
+		17FF90AD1A81FCEA004E1A4A /* MLLocationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLocationModel.h; sourceTree = "<group>"; };
+		17FF90AE1A81FCEA004E1A4A /* MLLocationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLocationModel.m; sourceTree = "<group>"; };
+		17FF90B01A81FDEB004E1A4A /* MLAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAnnotationView.h; sourceTree = "<group>"; };
+		17FF90B11A81FDEB004E1A4A /* MLAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLAnnotationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +98,10 @@
 			children = (
 				17FF90791A81FACE004E1A4A /* AppDelegate.h */,
 				17FF907A1A81FACE004E1A4A /* AppDelegate.m */,
-				17FF907C1A81FACE004E1A4A /* ViewController.h */,
-				17FF907D1A81FACE004E1A4A /* ViewController.m */,
 				17FF907F1A81FACE004E1A4A /* Main.storyboard */,
 				17FF90821A81FACE004E1A4A /* Images.xcassets */,
 				17FF90841A81FACE004E1A4A /* LaunchScreen.xib */,
+				17FF909B1A81FB2B004E1A4A /* Classes */,
 				17FF90751A81FACE004E1A4A /* Supporting Files */,
 			);
 			path = Modulift;
@@ -117,6 +131,65 @@
 				17FF90901A81FACF004E1A4A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		17FF909B1A81FB2B004E1A4A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				17FF909C1A81FB2B004E1A4A /* Global */,
+				17FF909D1A81FB2B004E1A4A /* Libraries */,
+				17FF909E1A81FB2B004E1A4A /* Models */,
+				17FF909F1A81FB2B004E1A4A /* ViewControllers */,
+				17FF90A01A81FB2B004E1A4A /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		17FF909C1A81FB2B004E1A4A /* Global */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		17FF909D1A81FB2B004E1A4A /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		17FF909E1A81FB2B004E1A4A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				17FF90A41A81FB63004E1A4A /* MLObject.h */,
+				17FF90A51A81FB63004E1A4A /* MLObject.m */,
+				17FF90AD1A81FCEA004E1A4A /* MLLocationModel.h */,
+				17FF90AE1A81FCEA004E1A4A /* MLLocationModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		17FF909F1A81FB2B004E1A4A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				17FF90A11A81FB59004E1A4A /* MLViewController.h */,
+				17FF90A21A81FB59004E1A4A /* MLViewController.m */,
+				17FF90A71A81FB78004E1A4A /* MLOurNetworkVC.h */,
+				17FF90A81A81FB78004E1A4A /* MLOurNetworkVC.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		17FF90A01A81FB2B004E1A4A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				17FF90AA1A81FCAB004E1A4A /* MLLocationInfoCollectionCell.h */,
+				17FF90AB1A81FCAB004E1A4A /* MLLocationInfoCollectionCell.m */,
+				17FF90B01A81FDEB004E1A4A /* MLAnnotationView.h */,
+				17FF90B11A81FDEB004E1A4A /* MLAnnotationView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +236,7 @@
 		17FF906A1A81FACE004E1A4A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ML;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Jordan Augustine";
 				TargetAttributes = {
@@ -219,9 +293,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17FF907E1A81FACE004E1A4A /* ViewController.m in Sources */,
+				17FF90A61A81FB63004E1A4A /* MLObject.m in Sources */,
+				17FF90A31A81FB59004E1A4A /* MLViewController.m in Sources */,
 				17FF907B1A81FACE004E1A4A /* AppDelegate.m in Sources */,
 				17FF90781A81FACE004E1A4A /* main.m in Sources */,
+				17FF90B21A81FDEB004E1A4A /* MLAnnotationView.m in Sources */,
+				17FF90AF1A81FCEA004E1A4A /* MLLocationModel.m in Sources */,
+				17FF90A91A81FB78004E1A4A /* MLOurNetworkVC.m in Sources */,
+				17FF90AC1A81FCAB004E1A4A /* MLLocationInfoCollectionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
